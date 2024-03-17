@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>花燈工廠</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Your CSS file -->
+    <style>
+        .cont { position: absolute;top: 50px;}
+        .cont{width: 80%; margin: 10%; }
+        .pics{position: fixed;left: 800px;top: 130px;}
+        
+        .slideshow-container{
+            width:100%;
+            height:0;
+            padding-bottom: 100%;
+            overflow:hidden;
+            background-position: center center;
+            background-repeat: no-repeat;
+            -webkit-background-size:cover;
+            -moz-background-size:cover;
+            background-size:cover;
+            border-radius: 50px;
+            box-shadow: 5px 5px 5px gray;
+        }
+        .slideshow-container:hover .overlay {
+            opacity: 1;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            transition: .5s ease;
+            background-color: rgb(176, 181, 183);
+            border-radius: 50px;
+        }
+        .cont{
+            width: 630px; height: 100%;
+            border-radius: 50px;
+            
+            box-shadow: 5px 5px 5px 5px gray;
+        }
+        .text {
+            color: white;
+            font-size: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        h2 {
+            width: 600px;
+            border-bottom: 5px dotted rgb(150, 177, 221);
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="33.png" alt="花燈工廠" id="logo"> <!-- Replace with your logo image -->
+        <img src="88.png" alt="花燈" id="lantern">
+        <nav>
+            <ul>
+                <li><a href="#about">關於我們</a></li>
+                <li><a href="#contact">聯絡方式</a></li>
+                <li><a href="#address">公司地址</a></li>
+                <li><a href="#address">作品展覽</a></li>
+                <li><a href="#address">夥伴招募</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <!-- Other webpage content -->
+    <div class="cont">
+        <section id="story" class="story">
+            <h2>我們的故事</h2>
+            <p>你是否對花燈藝術充滿好奇？是否曾經對花燈的製作過程感到著迷？</br>
+            現在，我們誠摯地邀請您加入「花燈工廠」，一個充滿創意、開放式的中途之家。</p>
+        </section>
+        <section id="address" class="address">
+            <h2>我們是誰？</h2>
+            <p>我們是一群熱愛花燈藝術的人，不論年齡、背景或經歷。</p>
+            <p>我們相信，每個人都可以在這裡找到屬於自己的創作空間。</p>
+        </section>
+        <section id="contact" class="contact">
+            <h2>我們的使命：</h2>
+            <p>我們致力於傳承台灣花燈的精髓，讓這項傳統工藝在現代綻放新的光彩。</p>
+            <p>我們歡迎二度就業的朋友，無論您是退休人士、藝術愛好者，</br>
+                還是尋找新的人生方向，都可以在這裡找到屬於自己的位置。</p>
+        </section>
+        <section id="contact" class="contact">
+            <h2>我們的特色：</h2>
+            <p>學習與交流：在這裡，您可以學習到花燈的製作技巧，並與其他燈藝愛好者交流心得。</p>
+            <p>開放式中途之家：我們的門戶永遠敞開，歡迎您隨時走進來，分享您的故事和創意。</p>
+        </section>
+
+    </div>
+    <div class="pics">
+        <div class="slideshow-container" >
+            <!-- 幻燈片图片 -->
+            <div class="mySlides">
+                <img src="image1.jpg" alt="花燈1" width="400" height="600">
+                <div class="overlay">
+                    <div class="text">彩龍</div>
+                </div>
+            </div>
+            <div class="mySlides">
+                <img src="image2.jpg" alt="花燈2" width="400" height="600">
+                <div class="overlay">
+                    <div class="text">飛龍花燈</div>
+                </div>
+            </div>
+          
+            
+            
+            </div>
+        </div>
+    </div>
+    <script>
+        // JavaScript：手动切换幻灯片
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            const slides = document.getElementsByClassName("mySlides");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+            slides[slideIndex - 1].style.display = "block";
+        }
+
+        // JavaScript：点击切换幻灯片
+        const imi = document.querySelector('.slideshow-container');
+        imi.addEventListener("click",function(){
+            showSlides();
+        });
+    </script>
+</body>
+</html>
