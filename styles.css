@@ -1,0 +1,56 @@
+/* styles.css */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    background-color: #ffffff; /* Set your desired background color */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow */
+}
+
+#logo {
+    width: 250px; /* Adjust logo width */
+    height: auto;
+    display: block;
+    margin: 10px auto; /* Center the logo vertically */
+}
+#lantern {
+    position: absolute;
+    left: 450px;
+    top: 0px;
+    width: 50px; /* Adjust logo width */
+    height: auto;
+    display: block;
+    margin: 10px auto; /* Center the logo vertically */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-color: #2683f6; /* Set your desired background color */
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav li a {
+    text-decoration: none;
+    color: #fff; /* Set link color */
+    padding: 10px;
+    transition: background-color 0.3s ease; /* Add smooth transition */
+}
+
+nav li a:hover {
+    background-color: #1a5ca9; /* Set hover background color */
+    opacity: 80%;
+}
